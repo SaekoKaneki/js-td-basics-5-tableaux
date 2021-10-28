@@ -17,7 +17,7 @@ TABLEAU (ARRAY) :
 // 1. Initialiser un nouveau tableau
 
 // 1°) Première méthode : déclaration littérale
-var names = ['John', 'Mark', 'Jane'];
+let names = ['John', 'Mark', 'Jane'];
 /*
 - Un tableau indicé est un conteneur qui contient plusieurs données à la fois
 - Chaque donnée est associée à un indice qui représente la place de la donnée dans le tableau
@@ -36,9 +36,18 @@ EXERCICE 1 :
 - créer un tableau semaine qui contient les noms des jours de la semaine
 - afficher ce tableau dans la console
 */
+const aDays = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+console.log(aDays);
+// function days(jour) {
+//     console.log(jour);
+// }
+const days =function (jour){
+    console.log(jour);
+}
+aDays.forEach(days);
+console.table(aDays);
 
-
-// N.B. La fonction console.table() est très intéressante à utiliser pour affciher un tableau
+// N.B. La fonction console.table() est très intéressante à utiliser pour afficher un tableau
 
 
 
@@ -54,12 +63,16 @@ L'opérateur pour accéder à un élément d'un tableau est le crochet :
 */
 
 /* 
-EXERCCICE 2 : afficher dans la console
+EXERCICE 2 : afficher dans la console
 	- "Le premier jour de la semaine est …" (où … est le nom du jour récupéré dans le tableau)
 	- "Le dernier jour de la semaine est…" (où … est le nom du jour récupéré dans le tableau)
  */
  // lundi
 // dimanche
+if (aDays.length > 0){
+    console.log(aDays[0]);
+    console.log(aDays[aDays.length-1]);
+}
 
 
 // 3. Nombre d'éléments dans un tableau : la propriété "length" du tableau
@@ -89,19 +102,24 @@ console.log(names);
 EXERCICE 4 :
 - changer "samedi" en "saturday"
 - réafficher le tableau
-- stocker dimanche dans un variable jourFerie
+- stocker dimanche dans un constante jourFerie
 - afficher le contenu de cette variable dans la console
 - ajouter un nouveau jour, dimanche2, à la fin de la semaine
 - réafficher le tableau des jours de la semaine
 */ 
-
+aDays[5] = 'Saturday';
+const jourFerie = aDays[aDays.length-1];
+aDays.push('Dimanche2');
+aDays[aDays.length] = 'Dimanche 3';
+console.log(jourFerie);
+console.table(aDays);
 
 
 
 // 5. Un tableau peut contenir des données de différents types
-var john = ['John', 'Smith', 1990, 'designer', false];
+let john = ['John', 'Smith', 1990, 'designer', false];
 // 	Un tableau peut même contenir un tableau
-var mark = ['Mark', 'Smith', 1990, 'designer', ['John', 'Mary'], true];
+let mark = ['Mark', 'Smith', 1990, 'designer', ['John', 'Mary'], true];
 
 
 // 6. Méthodes associées à un tableau 
@@ -120,12 +138,12 @@ console.log(john);
 console.log(john.indexOf(23));
 
 // 4°) Méthode pour inverser l'ordre des données dans un tableau
-var tab = [0,1,2,3,4];
+let tab = [0,1,2,3,4];
 tab.reverse(); // inverse l'ordre du tableau
 console.log(tab); 
 
 // 7. Manière classique de tester si une donnée se trouve dans un tableau
-var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+let isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
 console.log(isDesigner);
 
 /*
@@ -145,8 +163,12 @@ EXERCICE 5 :
 - réafficher le tableau
 */
 
-
-
+const aFruits = ['pomme', 'banane', 'poire', 'pêche', 'orange'];
+aFruits.unshift('fraise');
+aFruits.push('myrtille');
+aFruits.pop();
+console.table(aFruits);
+console.log(`La poire est mon fruit n°${aFruits.indexOf('poire')+1}, il porte l\'indice ${aFruits.indexOf('poire')}\`);
 
 
 
