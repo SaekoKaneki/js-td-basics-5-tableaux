@@ -13,6 +13,6 @@ Ecrivez un programme qui :
 	(précédé du texte "Le pauvre Aramis est mort…")
 */
 
-
+splice(start, deleteCount)
 
 
