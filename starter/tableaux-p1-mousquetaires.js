@@ -13,6 +13,12 @@ Ecrivez un programme qui :
 	(précédé du texte "Le pauvre Aramis est mort…")
 */
 
-splice(start, deleteCount)
+//splice(start, deleteCount)
+
+const aMousquetaires=["Athos","Porthos","Aramis"];
+for (let i =0; i<aMousquetaires.length; i++){
+    console.log(`Voici les Trois Mousquetaires : ${aMousquetaires[i]}`);
+}
+
 
 

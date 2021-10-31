@@ -24,21 +24,26 @@ EXERCICE 1 :
 	2°) avec une boucle while
 	3°) avec une boucle for of
 */
-
-
+const aFilms=["Forrest Gump", "Bohemian Rhapsody", "Le Seigneur des anneaux","Harry Potter"];
+const aFilms2=["Forrest Gump", "Bohemian Rhapsody", "Le Seigneur des anneaux","Harry Potter"];
+//console.table(aFilms)
 
 // Boucle FOR
 
-
-
-
+for (let i =0; i<aFilms.length; i++){
+    console.log(aFilms[i]);
+}
 // Boucle WHILE
-
-
-
-
+let k =0;
+while (k<aFilms2.length){
+    k++
+    console.log(aFilms[k]);
+}
 
 // Boucle FOR OF
+for (const element of aFilms){
+    console.log(element);
+}
 /*
 Une troisième solution pour parcourir un tableau est d'utiliser la boucle  for-of (ES6) :
 for (const element of tableau) {
@@ -46,8 +51,6 @@ for (const element of tableau) {
 }
 Elle a l'avantage de ne pas nécessiter la gestion d'un compteur de boucle.
 */
-
-
 
 
 
@@ -59,19 +62,24 @@ EXERCICE 2 :
 	2°) avec une boucle while
 	3°) avec une boucle for of
 */ 
+const john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 
 // Boucle FOR
-
-
+for (let j =0; j<john.length; j++){
+    console.log(john[j]);
+}
 
 // Boucle WHILE
-
-
-
-
+let l =0;
+while ( l<john.length){
+    l++
+    console.log(john[l]);
+}
 // Boucle FOR OF
 
-
+for (const elements of john){
+    console.log(elements);
+}
 
 
 /*
@@ -83,11 +91,17 @@ EXERCICE 3 :
 	et ajoute dans le tableau "carres" le carré de chaque nombre
 - afficher "Voici mon tableau de carrés :" et le tableau contentant les carrés
 */
+const aNumbers = [1,2,3,4,5];
 
-
-
-
-
+for (let i =0; i<aNumbers.length; i++){
+    console.log(`Voici mon tableau de nombres : ${aNumbers[i]}`);
+}
+let aCarre = [];
+for (p=0; p<aNumbers.length; p++){
+    aCarre = aNumbers*aNumbers;
+}
+//console.table(aCarre);
+console.log(`Voici mon tableau de carrés : ${aCarre[p]}`);
 
 
 
@@ -119,7 +133,7 @@ Utiliser la méthode forEach pour
 
 
 /*
-EXERCICE 3 :
+EXERCICE 5 :
 - créer un tableau "nombres" qui contient les 5 premiers entiers
 - afficher "Voici mon tableau de nombres :" et votre tableau
 - créer un tableau vide "carres" qui contiendra les carrés de vos nombres
@@ -148,7 +162,7 @@ EXERCICE :
 	(précéder d'un titre "Les infos de John jusque sa date de naissance :")
 3. Parcourir le tableau John à l'envers
 */
-var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+var johns = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 // continue
 console.log("Les infos textuelles de John :");
 

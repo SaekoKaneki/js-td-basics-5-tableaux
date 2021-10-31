@@ -20,3 +20,27 @@ Il aime donner en guise de pourboire :
 
 BONNE CHANCE 😀
 */
+
+// const aFacture = [124,48,268];
+// console.table(aFacture);
+let iFacture;
+function Pourboire(prix, pourboire){
+    iFacture = prix;
+    if (iFacture < 50){
+        (iFacture*0.2)=pourboire;
+        console.log(`${pourboire}`);
+    }else if (iFacture=>50 || iFacture < 200){
+        console.log(iFacture*0.15);
+    }else{
+        console.log(iFacture*0.1);
+    }
+    return iFacture;
+}
+console.log(Pourboire(124));
+console.log(Pourboire(48));
+console.log(Pourboire(268));
+
+const aPrix=[Pourboire(124), Pourboire(48), Pourboire(268)];
+console.table(aPrix);
+const aPrixPourboire=[Pourboire(124, `${iFacture}`), Pourboire(48,`${iFacture}`), Pourboire(268,`${iFacture}`)];
+console.table(aPrixPourboire);
