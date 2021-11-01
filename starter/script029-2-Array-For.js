@@ -92,16 +92,19 @@ EXERCICE 3 :
 - afficher "Voici mon tableau de carrés :" et le tableau contentant les carrés
 */
 const aNumbers = [1,2,3,4,5];
+let aCarre = [];
+let iCarre;
 
 for (let i =0; i<aNumbers.length; i++){
     console.log(`Voici mon tableau de nombres : ${aNumbers[i]}`);
 }
-let aCarre = [];
+
 for (p=0; p<aNumbers.length; p++){
-    aCarre = aNumbers*aNumbers;
+    iCarre = aNumbers[p]*aNumbers[p];
+    aCarre.push(iCarre);
 }
-//console.table(aCarre);
-console.log(`Voici mon tableau de carrés : ${aCarre[p]}`);
+console.log(`Voici mon tableau de carrés :`);
+console.table(aCarre);
 
 
 
@@ -122,14 +125,22 @@ Utiliser la méthode forEach pour
 	- afficher les infos de John
 */
 
-
 // première écriture
-
+john.forEach(function (element){
+    console.log(element);
+})
+aFilms.forEach(function (elementF){
+    console.log(elementF);
+})
 
 
 // écriture ES6
-
-
+john.forEach(element=>{
+    console.log(element);
+})
+aFilms.forEach(elementF =>{
+    console.log(elementF);
+})
 
 
 /*
@@ -141,7 +152,17 @@ EXERCICE 5 :
 	ajouter dans le tableau "carres" le carré de chaque nombre
 - afficher "Voici mon tableau de nombres au carré :" et le tableau contentant les carrés
 */
-
+let aNumbers2=[1,2,3,4,5];
+let Carre2=[];
+let iCarre2;
+console.log(`Voici mon tableau de nombres :`);
+console.table(aNumbers2)
+aNumbers2.forEach(elementN=>{
+    iCarre2=elementN*elementN
+    Carre2.push(iCarre2);
+})
+console.log(`Voici mon tableau de nombres au carré :`)
+console.table(Carre2);
 
 
 

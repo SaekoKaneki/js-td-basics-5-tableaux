@@ -23,29 +23,29 @@ BONNE CHANCE 😀
 
 // const aFacture = [124,48,268];
 // console.table(aFacture);
-let iFacture;
-let iPourboire;
-function Pourboire(prix, pourboire){
-    iFacture = prix;
-    iPourboire = pourboire
-    if (iFacture < 50){
-        iPourboire = iFacture*0.2
-        console.log(iPourboire);
-    }else if (iFacture=>50 || iFacture < 200){
-        iPourboire = iFacture*0.15
-        console.log(iPourboire);
-    }else{
-        iPourboire = iFacture*0.1
-        console.log(iPourboire);
-    }
-    return iFacture;
-    return  iPourboire;
-}
-// console.log(Pourboire(124));
-// console.log(Pourboire(48));
-// console.log(Pourboire(268));
+let iFacture = [];
+let iPourboire =[];
+function Pourboire(prix){
+    let pourboire = 0;
+    if (prix < 50){
+        pourboire = prix*0.2
+        iPourboire.push(pourboire);
+        iFacture.push(pourboire+prix);
 
-// const aPrix=[Pourboire(124), Pourboire(48), Pourboire(268)];
-// console.table(aPrix);
-const aPrixPourboire=[Pourboire(124, `${iPourboire}`), Pourboire(48,`${iPourboire}`), Pourboire(268,`${iPourboire}`)];
-console.table(aPrixPourboire);
+    }else if (prix>=50 || prix < 200){
+        pourboire = prix*0.15
+        iPourboire.push(pourboire);
+        iFacture.push(pourboire+prix);
+    }else{
+        pourboire = prix*0.1
+        iPourboire.push(pourboire);
+        iFacture.push(pourboire+prix);
+    }
+}
+console.log(Pourboire(124));
+console.log(Pourboire(48));
+console.log(Pourboire(268));
+
+console.table(iFacture);
+console.table(iPourboire);
+

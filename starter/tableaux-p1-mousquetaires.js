@@ -19,6 +19,12 @@ const aMousquetaires=["Athos","Porthos","Aramis"];
 for (let i =0; i<aMousquetaires.length; i++){
     console.log(`Voici les Trois Mousquetaires : ${aMousquetaires[i]}`);
 }
+aMousquetaires.push('D\'artagnan');
+aMousquetaires.forEach(element =>{
+    console.log(`Ils sont quatre à présent :${element}`)
+})
 
-
-
+aMousquetaires.splice(2,1);
+for (element of aMousquetaires){
+    console.log(`Le pauvre Aramis est mort ${element}`);
+}

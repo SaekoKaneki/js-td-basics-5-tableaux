@@ -17,3 +17,12 @@ Aide :
 		elle devient le nouveau maximum
 	- On affiche
 */
+let aTableaux = [3, 11, 7, 2, 90, 10];
+console.table(aTableaux);
+let NumMax =3;
+for (let i=1; i < aTableaux.length;i++){
+    if(aTableaux[i]> NumMax){
+        NumMax = aTableaux[i];
+    }
+}
+console.log(`La plus grande valeur de mon tableau est ${NumMax}`);
