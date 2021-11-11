@@ -21,7 +21,7 @@ for (let i =0; i<aMousquetaires.length; i++){
 }
 aMousquetaires.push('D\'artagnan');
 aMousquetaires.forEach(element =>{
-    console.log(`Ils sont quatre à présent :${element}`)
+    console.log(`Ils sont quatre à présent :${element}`);
 })
 
 aMousquetaires.splice(2,1);
