@@ -41,7 +41,7 @@ console.log(aDays);
 // function days(jour) {
 //     console.log(jour);
 // }
-const days =function (jour){
+const days = function (jour){
     console.log(jour);
 }
 aDays.forEach(days);
@@ -168,7 +168,7 @@ aFruits.unshift('fraise');
 aFruits.push('myrtille');
 aFruits.pop();
 console.table(aFruits);
-console.log(`La poire est mon fruit n°${aFruits.indexOf('poire')+1}, il porte l\'indice ${aFruits.indexOf('poire')}\`);
+console.log(`La poire est mon fruit n°${aFruits.indexOf('poire')+1}, il porte l\'indice ${aFruits.indexOf('poire')}`);
 
 
 

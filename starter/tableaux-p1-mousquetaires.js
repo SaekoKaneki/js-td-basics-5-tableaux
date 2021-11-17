@@ -15,16 +15,16 @@ Ecrivez un programme qui :
 
 //splice(start, deleteCount)
 
-const aMousquetaires=["Athos","Porthos","Aramis"];
-for (let i =0; i<aMousquetaires.length; i++){
-    console.log(`Voici les Trois Mousquetaires : ${aMousquetaires[i]}`);
+aMousquetaires = ['Athos', 'Porthos' , 'Aramis'];
+for (let g = 0; g < aMousquetaires.length; g++){
+    console.log(`Voici les Trois Mousquetaires : ${aMousquetaires[g]}`);
 }
-aMousquetaires.push('D\'artagnan');
-aMousquetaires.forEach(element =>{
-    console.log(`Ils sont quatre à présent :${element}`);
+aMousquetaires.push('D\'Artagnan');
+aMousquetaires.forEach( elements  =>{
+    console.log(`Ils sont quatre à présent :${elements}`);
 })
-
 aMousquetaires.splice(2,1);
-for (element of aMousquetaires){
-    console.log(`Le pauvre Aramis est mort ${element}`);
+for (const mousquetaires of aMousquetaires) {
+    console.log(`Le pauvre Aramis est mort…${mousquetaires}`)
 }
+console.table(aMousquetaires);
